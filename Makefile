@@ -13,7 +13,7 @@ OBJDIR := obj
 # Edit the below lists to add binaries and objects
 
 # List of projects (binaries) to make by default, run 'make binaryname' to make a non-default one from the list below
-PROJS := projname
+PROJS := 
 
 # List of binaries that can be made, and the objects they each need
 
@@ -30,7 +30,9 @@ userclean:
 
 # So that we can find .h and .cpp files as prereqs
 vpath %.h $(INCDIR)
+vpath %.c $(SRCDIR)
 vpath %.cpp $(SRCDIR)
+vpath %.asm $(SRCDIR)
 
 # Format PROJS correctly to be valid targets
 _PROJ_TARGETS := $(addprefix $(BINDIR)/, ${PROJS})
