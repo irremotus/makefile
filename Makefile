@@ -46,6 +46,8 @@ all: folders $(_PROJ_TARGETS)
 folders:
 	@if [ ! -d "$(BINDIR)" ]; then mkdir -p $(BINDIR) && echo "mkdir -p $(BINDIR)"; fi
 	@if [ ! -d "$(OBJDIR)" ]; then mkdir -p $(OBJDIR) && echo "mkdir -p $(OBJDIR)"; fi
+	@if [ ! -d "$(SRCDIR)" ]; then mkdir -p $(SRCDIR) && echo "mkdir -p $(SRCDIR)"; fi
+	@if [ ! -d "$(INCDIR)" ]; then mkdir -p $(INCDIR) && echo "mkdir -p $(INCDIR)"; fi
 
 # Makes '$(BINDIR)/binaryname' with prerequisites: '$(OBJDIR)/prereqname.o'.  Prereq names come from expanding the variable named like binaryname
 # $$($$(*F)) expands (with second expansion) to the names of the needed prereqs. $(*F) expands to the target name without directory. $($(*F)) in effect expands the variable named *F
